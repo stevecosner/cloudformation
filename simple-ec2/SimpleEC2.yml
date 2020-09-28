@@ -1,3 +1,4 @@
+# ami id below is AWS Linux2 in us-east-2
 ---
 AWSTemplateFormatVersion: '2010-09-09'
 Description: Deploy a simple Amazon Linux Instance with default settings.
