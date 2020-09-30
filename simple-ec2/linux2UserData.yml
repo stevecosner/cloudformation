@@ -1,0 +1,23 @@
+---
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Deploy a simple Centos8 EC2 with user data and allow SSH connectivity.
+Parameters:
+  KeyName:
+    Description: Default Key
+    Type: AWS::EC2::KeyPair::KeyName
+    Default: id_rsa_msa
+Resources:
+  SimpleInstance:
+    Type: AWS::EC2::Instance
+    Properties:
+      KeyName:
+        Ref: KeyName
+      InstanceType: t2.micro
+      ImageId: ami-0f7919c33c90f5b58
+      UserData:
+        Fn::Base64: 
+         !Sub |
+           #!/bin/bash -xe
+           yum update -y
+           yum install httpd -y
+           systemctl start httpd
