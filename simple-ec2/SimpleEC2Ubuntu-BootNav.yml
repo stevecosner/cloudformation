@@ -1,11 +1,13 @@
+#Image is Ubuntu 18.04 in US-east-2
+
 ---
 AWSTemplateFormatVersion: '2010-09-09'
-Description: Deploy a simple Amazon Linux Instance and allow SSH connectivity.
+Description: Deploy a simple Ubuntu 18.04 image with the Start Bootstrap Scrolling Nav template.
 Parameters:
   KeyName:
     Description: Default Key
     Type: AWS::EC2::KeyPair::KeyName
-    Default: id_rsa_msa
+    Default: id_rsa
 Resources:
   SimpleInstance:
     Type: AWS::EC2::Instance
