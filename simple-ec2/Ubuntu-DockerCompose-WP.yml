@@ -1,6 +1,6 @@
 ---
 AWSTemplateFormatVersion: '2010-09-09'
-Description: Deploy a simple Amazon Linux Instance and allow SSH connectivity.
+Description: Deploy a simple Ubuntu 18.04 image with docker, docker-compose and Wordpress.
 Parameters:
   KeyName:
     Description: Default Key
