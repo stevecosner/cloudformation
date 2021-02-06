@@ -5,7 +5,7 @@ Parameters:
   KeyName:
     Description: Default Key
     Type: AWS::EC2::KeyPair::KeyName
-    Default: id_rsa_msa
+    Default: id_rsa
 Resources:
   SimpleInstance:
     Type: AWS::EC2::Instance
